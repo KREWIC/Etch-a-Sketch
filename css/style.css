@@ -16,7 +16,7 @@ body{
 }
 
 #grid{
-    padding:25px;
+    padding: 75px;
     border: solid black;
 }
 
@@ -25,4 +25,20 @@ body{
     flex-direction:column;
     justify-content:center;
     gap:60px;
+}
+
+#slideContainer{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(270deg);
+}
+
+.rightButtons{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    gap:100px;
 }
