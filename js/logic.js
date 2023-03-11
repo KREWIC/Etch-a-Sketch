@@ -10,7 +10,7 @@ slideNum.setAttribute('class', 'slideNum');
 rightContainer.append(slideNum);
 //^^ Adds a display for the slider the user is changing
 
-console.log(document.getElementById('myRange').value)
+console.log(1200/slider.value);
 
 slideNum.textContent = slider.value;
 //^^ This will eventually set the slide number to be equal to the value of the slider
@@ -22,7 +22,8 @@ let row = [];
 
 //___________________________________________________________________________
 
-function gridClear(){
+function gridClear()
+{
     for (let i = 0;i<row.length; i++)
     {
         row[i].remove('#row');
@@ -31,7 +32,8 @@ function gridClear(){
 //^^ This will clear out the grid to prepare for the new grid value
 
 
-function gridChange(sliderNumber){
+function gridChange(sliderNumber)
+{
 
     gridClear();
 
@@ -48,12 +50,16 @@ function gridChange(sliderNumber){
         for (let i = 0; i<sliderNumber; i++ )
             {
              column [i]= document.createElement('div');
-             column [i].setAttribute('id','grid');
+             column [i].setAttribute('id','grid' + slider.value);
+             
              row[j].append(column[i]);
+             
+             //>> Need to set something here to alter the css grid padding to 1200/slideNumber
             } 
         //^^This for loop creates each item in each row
     }
-
+    //document.getElementById('grid').style.padding = 1200/(slider.value*slider.value);
+    console.log(1200/(slider.value*slider.value));
 }
 //^^ This creates the new grid
 

@@ -15,10 +15,46 @@ body{
     display:flex;
 }
 
-#grid{
-    padding: 75px;
+#grid1{
+    padding: 400px;
     border: solid black;
 }
+
+#grid2{
+    padding: 200px;
+    border: solid black;
+}
+
+#grid3{
+    padding: 133.33px;
+    border: solid black;
+}
+
+#grid4{
+    padding: 100px;
+    border: solid black;
+}
+
+#grid5{
+    padding: 80px;
+    border: solid black;
+}
+
+#grid6{
+    padding: 66.66px;
+    border: solid black;
+}
+
+#grid7{
+    padding: 57.14px;
+    border: solid black;
+}
+
+#grid8{
+    padding: 50px;
+    border: solid black;
+}
+
 
 .leftButtons{
     display:flex;
