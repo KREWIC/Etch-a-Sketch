@@ -17,42 +17,46 @@ body{
 
 #grid1{
     padding: 400px;
-    border: solid black;
+    border: solid black 1px;
 }
 
 #grid2{
     padding: 200px;
-    border: solid black;
+    border: solid black 1px;
 }
 
 #grid3{
     padding: 133.33px;
-    border: solid black;
+    border: solid black 1px;
 }
 
 #grid4{
     padding: 100px;
-    border: solid black;
+    border: solid black 1px;
 }
 
 #grid5{
     padding: 80px;
-    border: solid black;
+    border: solid black 1px;
 }
 
 #grid6{
     padding: 66.66px;
-    border: solid black;
+    border: solid black 1px;
 }
 
 #grid7{
     padding: 57.14px;
-    border: solid black;
+    border: solid black 1px;
 }
 
 #grid8{
     padding: 50px;
-    border: solid black;
+    border: solid black 1px;
+}
+
+.filled{
+    background-color: black;
 }
 
 

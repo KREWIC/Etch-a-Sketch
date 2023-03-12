@@ -36,8 +36,10 @@ function gridChange(sliderNumber)
 {
 
     gridClear();
+    //^^Clear all divs in the sketch screen
 
     slideNum.textContent = slider.value + 'X' + slider.value;
+    //^^number under slider changes here
 
     for (let j = 0; j<sliderNumber; j++)
 
@@ -49,17 +51,21 @@ function gridChange(sliderNumber)
 
         for (let i = 0; i<sliderNumber; i++ )
             {
-             column [i]= document.createElement('div');
-             column [i].setAttribute('id','grid' + slider.value);
+             column [i + (slider.value*j)]= document.createElement('div');
+             column [i+ (slider.value*j)].setAttribute('id','grid' + slider.value);
+
+             column[i + (slider.value*j)].addEventListener('mouseover', function(e){
+                column[i + (slider.value*j)].classList.add('filled');
+             })
              
-             row[j].append(column[i]);
+             row[j].append(column[i + (slider.value*j)]);
              
              //>> Need to set something here to alter the css grid padding to 1200/slideNumber
             } 
         //^^This for loop creates each item in each row
     }
     //document.getElementById('grid').style.padding = 1200/(slider.value*slider.value);
-    console.log(1200/(slider.value*slider.value));
+    //console.log(1200/(slider.value*slider.value));
 }
 //^^ This creates the new grid
 
@@ -72,3 +78,7 @@ slider.addEventListener('change', function(e){
     gridChange(slider.value);
     
 })
+
+//document.getElementById('grid').addEventListener('mouseover', function(e){
+  //  document.getElementById('grid').classList.add('filled');
+//})
